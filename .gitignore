@@ -1,0 +1,3 @@
+examples/hadoop-conf.*
+*.out
+*.err
