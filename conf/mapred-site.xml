@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<configuration>
+<property>
+  <name>mapred.job.tracker</name>
+  <value>MASTER_NODE:90001</value>
+  <description>The host and port that the MapReduce job tracker runs
+  at.  If "local", then jobs are run in-process as a single map
+  and reduce task.
+  </description>
+</property>
+
+<property>
+  <name>mapred.local.dir</name>
+  <value>MAPRED_LOCAL_DIR</value>
+  <final>true</final>
+</property>
+
+<property>
+  <name>mapred.tasktracker.map.tasks.maximum</name>
+  <value>MAPRED_TASKTRACKER_MAP_TASKS_MAXIMUM</value>
+  <description>The MH_MAP_TASKS_MAXIMUM will set the maximum amount of 
+     MAP tasks to be started on a single TASK node, this is either CPU
+     or memory bound.</description>
+</property>
+
+<property>
+  <name>mapred.tasktracker.reduce.tasks.maximum</name>
+  <value>MAPRED_TASKTRACKER_REDUCE_TASKS_MAXIMUM</value>
+  <description>The MH_REDUCE_TASKS_MAXIMUM will set the maximum amount 
+     of REDUCE tasks to be started on a single TASK node, this is most
+     likely memory bound.</description>
+</property>
+
+<property>
+  <name>mapred.map.tasks</name>
+  <value>MAPRED_MAP_TASKS</value>
+  <description>The MH_MAP_TASKS is used to hint the application of the 
+     total amount of MAP tasks that can be run on the cluster.</description>
+</property>
+
+<property>
+  <name>mapred.reduce.tasks</name>
+  <value>MAPRED_REDUCE_TASKS</value>
+  <description>The MH_REDUCE_TASKS is used to hint the application of 
+     the total amount of REDUCE tasks that can be run on the cluster.</description>
+</property>
+</configuration>
