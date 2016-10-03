@@ -206,9 +206,13 @@ mkdir -p $HADOOP_CONF_DIR
 if [ -d $HADOOP_HOME/conf ]; then           # Hadoop 1.x
   cp $HADOOP_HOME/conf/* $HADOOP_CONF_DIR
   MH_HADOOP_VERS=1
-elif [ -d $HADOOP_HOME/etc/hadoop ]; then   # Hadoop 2.x
-  cp $HADOOP_HOME/etc/hadoop/* $HADOOP_CONF_DIR
+#elif [ -d $HADOOP_HOME/etc/hadoop ]; then   # Hadoop 2.x
+#  cp $HADOOP_HOME/etc/hadoop/* $HADOOP_CONF_DIR
+#  MH_HADOOP_VERS=2
+elif [ -d $MYHADOOP/conf ]; then
+  cp $MYHADOOP/conf/* $HADOOP_CONF_DIR
   MH_HADOOP_VERS=2
+  echo "Found myhadoop conf"
 fi
 
 ### Pick the master node as the first node in the nodefile
