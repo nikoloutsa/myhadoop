@@ -42,4 +42,12 @@
         </description>
     </property>
 
+<property>
+   <name>dfs.namenode.secondary.http-address</name>
+   <value>MASTER_NODE:50090</value>
+   <description>The secondary namenode http server address and 
+       port.</description>
+   <final>true</final>
+  </property>
+
 </configuration>
