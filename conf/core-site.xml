@@ -8,7 +8,7 @@
     </property>
     <property>
         <name>fs.default.name</name>
-        <value>hdfs://MASTER_NODE:90000</value>
+        <value>hdfs://MASTER_NODE:9000</value>
         <description>The name of the default file system.  A URI whose
             scheme and authority determine the FileSystem implementation.  The
             uri's scheme determines the config property (fs.SCHEME.impl) naming

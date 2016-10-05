@@ -35,10 +35,10 @@ hdfs dfs -mkdir  /user/${USER}
 hdfs dfs -put ${OOZIEROOT}/examples examples
 
 
-ooziedb.sh create -sqlfile oozie.sql -runValidate DB Connection.
+#ooziedb.sh create -sqlfile oozie.sql -runValidate DB Connection.
 oozied.sh start
 
-ozie admin -oozie http://localhost:11000/oozie -status
+oozie admin -oozie http://localhost:11000/oozie -status
 #oozie job -oozie http://localhost:11000/oozie -config examples/apps/spark/job.properties -run
 oozie job -oozie http://localhost:11000/oozie -config examples/apps/map-reduce/job.properties -run
 
