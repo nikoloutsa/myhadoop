@@ -302,8 +302,7 @@ if [ ! -e ${config_subs[DFS_NAME_DIR]}/current ]; then
   if [ $MH_HADOOP_VERS -eq 1 ]; then
     HADOOP_CONF_DIR=$HADOOP_CONF_DIR $HADOOP_HOME/bin/hadoop namenode -format -nonInteractive -force
   elif [ $MH_HADOOP_VERS -eq 2 ]; then
-    HADOOP_CONF_DIR=$HADOOP_CONF_DIR $HADOOP_HOME/bin/hadoop namenode -format -nonInteractive -force
-    #HADOOP_CONF_DIR=$HADOOP_CONF_DIR $HADOOP_HOME/bin/hdfs namenode -format
+    HADOOP_CONF_DIR=$HADOOP_CONF_DIR $HADOOP_HOME/bin/hdfs namenode -format
   else
     mh_print "Unknown Hadoop version.  You must format namenode manually."
   fi
