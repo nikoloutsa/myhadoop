@@ -34,13 +34,6 @@ Working ARIS examples
 ```
 examples/hadoop.aris
 ```
-
-### Spark
-
-```
-examples/myspark.aris
-```
-
 ## About myHadoop
 This framework comes with three principal runtimes:
 
