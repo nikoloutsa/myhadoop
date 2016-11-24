@@ -1,23 +1,45 @@
-# myHadoop
+# ARIS myHadoop
+This is a fork (https://github.com/glennklockwood/myhadoop)
 
-This represents the logical continuation of the myhadoop project by Sriram 
-Krishnan (http://sourceforge.net/projects/myhadoop/).
-
-myhadoop provides a framework for launching Hadoop clusters within traditional 
-high-performance compute clusters and supercomputers.  It allows users to 
-provision and deploy Hadoop clusters within the batch scheduling environment of
-such systems with minimal expertise required.
+>This represents the logical continuation of the myhadoop project by Sriram 
+>Krishnan (http://sourceforge.net/projects/myhadoop/).
+>
+>myhadoop provides a framework for launching Hadoop clusters within traditional 
+>high-performance compute clusters and supercomputers.  It allows users to 
+>provision and deploy Hadoop clusters within the batch scheduling environment of
+>such systems with minimal expertise required.
 
 ## Quick Install
+No need to patch conf/ files all ready set.
 
-Assuming you unpacked myHadoop in /usr/local/myhadoop and your Hadoop binary
-distribution is located in /usr/local/hadoop-1.2.1:
+Use module
+```
+module load myhadoop/0.2
+```
 
-    cd /usr/local/hadoop-1.2.1/conf
-    patch < /usr/local/myhadoop/myhadoop-1.2.1.patch
+>Assuming you unpacked myHadoop in /usr/local/myhadoop and your Hadoop binary
+>distribution is located in /usr/local/hadoop-1.2.1:
+>
+>    cd /usr/local/hadoop-1.2.1/conf
+>    patch < /usr/local/myhadoop/myhadoop-1.2.1.patch
+>
+>That's it.  See USERGUIDE.md for a more detailed installation guide and a brief
+>introduction to using myHadoop.
 
-That's it.  See USERGUIDE.md for a more detailed installation guide and a brief
-introduction to using myHadoop.
+## Run examples
+
+Working ARIS examples
+### Hadoop
+
+```
+examples/hadoop.aris
+```
+
+### Spark
+
+```
+examples/myspark.aris
+```
 
 ## About myHadoop
 This framework comes with three principal runtimes:
